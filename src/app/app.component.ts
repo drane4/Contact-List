@@ -32,6 +32,9 @@ export class AppComponent {
   email: string;
   address: string;
 
+  postDoc: AngularFirestoreDocument<Contact>;
+  post: Observable<Contact>;
+
   constructor(private afs: AngularFirestore) {}
 
   ngOnInit() {
@@ -56,4 +59,11 @@ export class AppComponent {
     'address': this.address
   });
   }
+  getPost(postId) {
+    this.postDoc = this.afs.doc('Contact/'+postId);
+    this.post = this.postDoc.valueChanges();
+  }
+  deletePost(postId) {
+    this.afs.doc('Contact/'+postId).delete();
+}
 }

@@ -1,12 +1,4 @@
-<ul *ngFor="let Contact of contacts | async">
-  <li>
-    <strong>{{Contact.lname}}</strong>
-    <br>
-    {{Contact.fname}}
-  </li>
-</ul>
-
-<!-- <input type="text" [(ngModel)]="lname" name="lname" placeholder="Last Name..">
+<input type="text" [(ngModel)]="lname" name="lname" placeholder="Last Name..">
 <br>
 <input type="text" [(ngModel)]="fname" name="fname" placeholder="First Name..">
 <br>
@@ -21,41 +13,41 @@
 <input type="submit" value="Add Information" (click)="addPost()">
 
 <ul *ngFor="let Contact of contacts | async">
-  <li (click)="getPost(post.id)">
-    <strong>Last Name</strong> (<a href="#" (click)="deletePost(post.id)">delete</a>)
+  <li (click)="getPost(Contact.id)">
+    <strong>Last Name</strong> (<a href="#" (click)="deletePost(Contact.id)">delete</a>)
     <br>
-    {{post.data.lname}}
+    {{Contact.data.lname}}
+    <br>
+  </li>
+  <li (click)="getPost(Contact.id)">
+    <strong>First Name</strong> (<a href="#" (click)="deletePost(Contact.id)">delete</a>)
+    <br>
+    {{Contact.data.fname}}
+    <br>
+  </li>
+  <li (click)="getPost(Contact.id)">
+    <strong>Mobile</strong> (<a href="#" (click)="deletePost(Contact.id)">delete</a>)
+    <br>
+    {{Contact.data.mobile}}
+    <br>
+  </li>
+  <li (click)="getPost(Contact.id)">
+    <strong>Phone</strong> (<a href="#" (click)="deletePost(Contact.id)">delete</a>)
+    <br>
+    {{Contact.data.phone}}
+    <br>
+  </li>
+  <li (click)="getPost(Contact.id)">
+    <strong>E-mail</strong> (<a href="#" (click)="deletePost(Contact.id)">delete</a>)
+    <br>
+    {{Contact.data.email}}
     <br>
   </li>
   <li (click)="getPost(post.id)">
-    <strong>First Name</strong> (<a href="#" (click)="deletePost(post.id)">delete</a>)
+    <strong>Address</strong> (<a href="#" (click)="deletePost(Contact.id)">delete</a>)
     <br>
-    {{post.data.fname}}
-    <br>
-  </li>
-  <li (click)="getPost(post.id)">
-    <strong>Mobile</strong> (<a href="#" (click)="deletePost(post.id)">delete</a>)
-    <br>
-    {{post.data.mobile}}
-    <br>
-  </li>
-  <li (click)="getPost(post.id)">
-    <strong>Phone</strong> (<a href="#" (click)="deletePost(post.id)">delete</a>)
-    <br>
-    {{post.data.phone}}
-    <br>
-  </li>
-  <li (click)="getPost(post.id)">
-    <strong>E-mail</strong> (<a href="#" (click)="deletePost(post.id)">delete</a>)
-    <br>
-    {{post.data.email}}
-    <br>
-  </li>
-  <li (click)="getPost(post.id)">
-    <strong>Address</strong> (<a href="#" (click)="deletePost(post.id)">delete</a>)
-    <br>
-    {{post.data.address}}
+    {{Contact.data.address}}
     <br>
   </li>
 </ul>
- -->
+ 
