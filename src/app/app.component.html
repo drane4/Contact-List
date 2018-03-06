@@ -1,20 +1,61 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
+<ul *ngFor="let Contact of contacts | async">
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+    <strong>{{Contact.lname}}</strong>
+    <br>
+    {{Contact.fname}}
   </li>
 </ul>
 
+<!-- <input type="text" [(ngModel)]="lname" name="lname" placeholder="Last Name..">
+<br>
+<input type="text" [(ngModel)]="fname" name="fname" placeholder="First Name..">
+<br>
+<input type="text" [(ngModel)]="mobile" name="mobile" placeholder="Mobile..">
+<br>
+<input type="text" [(ngModel)]="phone" name="phone" placeholder="Phone..">
+<br>
+<input type="text" [(ngModel)]="email" name="email" placeholder="E-mail..">
+<br>
+<textarea [(ngModel)]="address" name="address" placeholder="Address.."></textarea>
+<br>
+<input type="submit" value="Add Information" (click)="addPost()">
+
+<ul *ngFor="let Contact of contacts | async">
+  <li (click)="getPost(post.id)">
+    <strong>Last Name</strong> (<a href="#" (click)="deletePost(post.id)">delete</a>)
+    <br>
+    {{post.data.lname}}
+    <br>
+  </li>
+  <li (click)="getPost(post.id)">
+    <strong>First Name</strong> (<a href="#" (click)="deletePost(post.id)">delete</a>)
+    <br>
+    {{post.data.fname}}
+    <br>
+  </li>
+  <li (click)="getPost(post.id)">
+    <strong>Mobile</strong> (<a href="#" (click)="deletePost(post.id)">delete</a>)
+    <br>
+    {{post.data.mobile}}
+    <br>
+  </li>
+  <li (click)="getPost(post.id)">
+    <strong>Phone</strong> (<a href="#" (click)="deletePost(post.id)">delete</a>)
+    <br>
+    {{post.data.phone}}
+    <br>
+  </li>
+  <li (click)="getPost(post.id)">
+    <strong>E-mail</strong> (<a href="#" (click)="deletePost(post.id)">delete</a>)
+    <br>
+    {{post.data.email}}
+    <br>
+  </li>
+  <li (click)="getPost(post.id)">
+    <strong>Address</strong> (<a href="#" (click)="deletePost(post.id)">delete</a>)
+    <br>
+    {{post.data.address}}
+    <br>
+  </li>
+</ul>
+ -->
