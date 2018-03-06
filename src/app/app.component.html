@@ -14,32 +14,16 @@
 <br>
 <input type="submit" value="Add Information" (click)="addPost()">
 
+
 <ul *ngFor="let Contact of contacts | async">
   <li (click)="getPost(Contact.id)">
-    <strong>Last Name</strong> (<a href="#" (click)="deletePost(Contact.id)">delete</a>)
+    <strong>Last Name: </strong> {{Contact.data.lname}} (<a href="#" (click)="deletePost(Contact.id)">delete</a>) 
     <br>
-    {{Contact.data.lname}}
-    <br>
-    <strong>First Name</strong> 
-    <br>
-    {{Contact.data.fname}}
-    <br>
-    <strong>Mobile</strong> 
-    <br>
-    {{Contact.data.mobile}}
-    <br>
-    <strong>Phone</strong> 
-    <br>
-    {{Contact.data.phone}}
-    <br>
-    <strong>E-mail</strong> 
-    <br>
-    {{Contact.data.email}}
-    <br>
-    <strong>Address</strong> 
-    <br>
-    {{Contact.data.address}}
-    <br>
+    <strong>First Name: </strong> {{Contact.data.fname}}<br>
+    <strong>Mobile: </strong> {{Contact.data.mobile}}<br>
+    <strong>Phone: </strong> {{Contact.data.phone}}<br>
+    <strong>E-mail</strong>{{Contact.data.email}}<br>
+    <strong>Address</strong>{{Contact.data.address}}<br>
   </li>
 </ul>
  

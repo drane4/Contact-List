@@ -49,7 +49,7 @@ export class AppComponent {
     })
   }
   addPost() {
-    this.afs.collection('contacts').doc('my-custom-id').set
+    this.contactsCol.add
     ({
     'lname': this.lname, 
     'fname': this.fname, 
