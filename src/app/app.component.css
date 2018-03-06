@@ -1,8 +1,9 @@
 input, textarea {
     display:block;
     width: 100%;
-    margin-bottom:15px;
-    padding:10px;
+    margin-bottom:25px;
+    padding-top:15px;
+    padding-bottom: 15px;
     background:none;
     border-bottom: 1px solid #414a59 !important;
     border:0;
@@ -20,18 +21,20 @@ input[type='submit'] {
 
 ul {
     list-style-type:none;
-    width:100%;
-    margin:0;padding:0;
+    width:90%;
+    margin-left:10px;
+    float: right;
 }
 ul li {
     background-color:#414a59;
     padding:20px;
-    margin-bottom:2px;
+    margin-bottom:-20px;
     color:#bec8d9;
 }
 ul li a {
     color:#ffcc00;
 }
 h1 {
-    margin-top:50px;
+    margin-top:10px;
+    color:#ffcc00;
 }

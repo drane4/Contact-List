@@ -1,5 +1,5 @@
 <h1>Contact Form</h1>
-
+<div style="width:50%; float:left;">
 <input type="text" [(ngModel)]="lname" name="lname" placeholder="Last Name..">
 <br>
 <input type="text" [(ngModel)]="fname" name="fname" placeholder="First Name..">
@@ -13,8 +13,9 @@
 <textarea [(ngModel)]="address" name="address" placeholder="Address.."></textarea>
 <br>
 <input type="submit" value="Add Information" (click)="addPost()">
+</div>
 
-
+<div style="width:50%; float:right">
 <ul *ngFor="let Contact of contacts | async">
   <li (click)="getPost(Contact.id)">
     <strong>Last Name: </strong> {{Contact.data.lname}} (<a href="#" (click)="deletePost(Contact.id)">delete</a>) 
@@ -26,4 +27,4 @@
     <strong>Address</strong>{{Contact.data.address}}<br>
   </li>
 </ul>
- 
+ </div>
