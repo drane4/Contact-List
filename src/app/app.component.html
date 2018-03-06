@@ -1,3 +1,5 @@
+<h1>Contact Form</h1>
+
 <input type="text" [(ngModel)]="lname" name="lname" placeholder="Last Name..">
 <br>
 <input type="text" [(ngModel)]="fname" name="fname" placeholder="First Name..">
@@ -18,33 +20,23 @@
     <br>
     {{Contact.data.lname}}
     <br>
-  </li>
-  <li (click)="getPost(Contact.id)">
-    <strong>First Name</strong> (<a href="#" (click)="deletePost(Contact.id)">delete</a>)
+    <strong>First Name</strong> 
     <br>
     {{Contact.data.fname}}
     <br>
-  </li>
-  <li (click)="getPost(Contact.id)">
-    <strong>Mobile</strong> (<a href="#" (click)="deletePost(Contact.id)">delete</a>)
+    <strong>Mobile</strong> 
     <br>
     {{Contact.data.mobile}}
     <br>
-  </li>
-  <li (click)="getPost(Contact.id)">
-    <strong>Phone</strong> (<a href="#" (click)="deletePost(Contact.id)">delete</a>)
+    <strong>Phone</strong> 
     <br>
     {{Contact.data.phone}}
     <br>
-  </li>
-  <li (click)="getPost(Contact.id)">
-    <strong>E-mail</strong> (<a href="#" (click)="deletePost(Contact.id)">delete</a>)
+    <strong>E-mail</strong> 
     <br>
     {{Contact.data.email}}
     <br>
-  </li>
-  <li (click)="getPost(post.id)">
-    <strong>Address</strong> (<a href="#" (click)="deletePost(Contact.id)">delete</a>)
+    <strong>Address</strong> 
     <br>
     {{Contact.data.address}}
     <br>

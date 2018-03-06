@@ -65,5 +65,5 @@ export class AppComponent {
   }
   deletePost(postId) {
     this.afs.doc('Contact/'+postId).delete();
-}
+  }
 }
